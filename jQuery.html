@@ -19,10 +19,15 @@
         // css, html, append, prepend, 
         // addClass, removeClass, toggleClass
         $(document).ready(function(){
-           $(".popup button").click(function(){
-             //$(".popup").css("display","none")
-             $(".popup").hide(); // show()
-           })
+          $("#btns button").eq(0).click(function(){
+            $("body").css("background","#ccc");
+          })
+          $("#btns button").eq(1).click(function(){
+            $("body").css("background","#222");
+          })
+          $("#btns button").eq(2).click(function(){
+            $("body").css("background","black");
+          })
         })
     </script>
     <style>
@@ -31,25 +36,12 @@
             --width-b : 500px;
             --width-s : 100px;
          }
-         .popup{
-            position: fixed;
-            width:var(--width-m);
-            height:var(--width-m);
-            border-radius: 50%;
-            background-color: black;
-            left:0; right:0;
-            top:0; bottom:0;
-            margin:auto;
-         }
-         .popup button{
-            position: absolute;
-            right:0; top:0;
-         }
+        
     </style>
 </head>
 <body>
-     <div class="popup">
-            <button>닫기</button>
-     </div>
+    <div id="btns">
+        <button>빨강</button><button>노랑</button><button>초록</button>
+    </div>
 </body>
 </html>
