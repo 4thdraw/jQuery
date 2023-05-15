@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리로 출력하기</title>
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.js"
+    integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
+    <script>
+        
+        // 선택자 : 액션을 발생시킨 트리거
+        // 예)   $("#gnb li") / $("#hd .container h1 a")
+        // 이벤트 : 시점  click, hover, focus , submit , ready
+                   // change 
+        // 메서드 : 어떻게 해준다.
+        // css, html, append, prepend, 
+        // addClass, removeClass, toggleClass
+        $(document).ready(function(){
+           $(".popup button").click(function(){
+             //$(".popup").css("display","none")
+             $(".popup").hide(); // show()
+           })
+        })
+    </script>
+    <style>
+         :root{
+            --width-m : 300px;
+            --width-b : 500px;
+            --width-s : 100px;
+         }
+         .popup{
+            position: fixed;
+            width:var(--width-m);
+            height:var(--width-m);
+            border-radius: 50%;
+            background-color: black;
+            left:0; right:0;
+            top:0; bottom:0;
+            margin:auto;
+         }
+         .popup button{
+            position: absolute;
+            right:0; top:0;
+         }
+    </style>
+</head>
+<body>
+     <div class="popup">
+            <button>닫기</button>
+     </div>
+</body>
+</html>
