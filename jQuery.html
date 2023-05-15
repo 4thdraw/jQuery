@@ -21,21 +21,38 @@
         $(document).ready(function(){
           $("#btns button").eq(0).click(function(){
             $("body").css("background","#ccc");
+            $(this).css("background","#ccc");
+            $(this).css("color","red");
           })
           $("#btns button").eq(1).click(function(){
             $("body").css("background","#222");
+            $(this).css("background","#222");
+            $(this).css("color","yellow");
           })
           $("#btns button").eq(2).click(function(){
             $("body").css("background","black");
+            $(this).css("background","black");
+            $(this).css("color","green");
           })
         })
     </script>
     <style>
          :root{
-            --width-m : 300px;
-            --width-b : 500px;
             --width-s : 100px;
          }
+         #btns{
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+         }
+         #btns button{
+            width: var(--width-s);
+            height: var(--width-s);
+            border-radius: 50%;
+            margin:0 1rem;
+            border :0;
+         } 
         
     </style>
 </head>
